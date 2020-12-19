@@ -1,7 +1,7 @@
 # Dictionary
 
 A minimalist dictionary built with JavaScript.
-[screenshot](./.github/screenshot.png)
+![screenshot](./.github/screenshot.png)
 
 ## How to use
 
