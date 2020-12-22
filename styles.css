@@ -16,6 +16,8 @@ input {
   border: none;
   padding-left: 1rem;
   font-size: 1rem;
+  box-shadow: 0.3rem 0.3rem #0f4ba5;
+  outline: none;
 }
 button {
   height: 2rem;
@@ -24,6 +26,8 @@ button {
   outline: none;
   border: none;
   border-radius: 0rem 0.3rem 0.3rem 0rem;
+  box-shadow: 0.3rem 0.3rem #0f4ba5;
+  cursor: pointer;
 }
 h2 {
   display: flex;
@@ -31,14 +35,16 @@ h2 {
   justify-content: center;
 }
 .title {
-  padding-bottom: 1rem;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-shadow: 0.1rem 0.1rem #0f4ba5;
 }
 .app {
   height: 100vh;
 }
 .text-container {
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 15vh;
 }
 .input-container {
   display: flex;
