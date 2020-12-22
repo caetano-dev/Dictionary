@@ -6,13 +6,13 @@ buttonElement.addEventListener("click", () => showDefinitions());
 
 async function getAPI() {
   const response = await fetch(
-    `https://dictionaryapi.com/api/v3/references/collegiate/json/${inputElement.value},?key=`,
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${inputElement.value}`,
     {
-      method: "GET",
+      method: "GET", 
     }
   );
   const results = await response.json();
-  return results[0].shortdef[0];
+  return results[0].meanings[0].definitions[0].definition
 }
 async function showDefinitions() {
   definitionDiv.innerHTML = "";
