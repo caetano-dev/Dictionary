@@ -6,7 +6,7 @@ buttonElement.addEventListener("click", () => showDefinitions());
 
 async function getAPI() {
   const response = await fetch(
-    `https://dictionaryapi.com/api/v3/references/collegiate/json/${inputElement.value},?key=a094f4ed-dc7b-46de-bcbd-fdb810da33bf`,
+    `https://dictionaryapi.com/api/v3/references/collegiate/json/${inputElement.value},?key=`,
     {
       method: "GET",
     }
