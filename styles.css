@@ -8,31 +8,28 @@
 html {
   background-color: rgb(60, 147, 206);
 }
-input {
+input,
+button {
   height: 2rem;
+  border: none;
+  box-shadow: 0.3rem 0.3rem #0f4ba5;
+  outline: none;
+}
+input {
   width: 50%;
   max-width: 30rem;
   border-radius: 0.3rem 0rem 0rem 0.3rem;
-  border: none;
   padding-left: 1rem;
   font-size: 1rem;
-  box-shadow: 0.3rem 0.3rem #0f4ba5;
-  outline: none;
 }
 button {
-  height: 2rem;
   width: 5rem;
   background-color: rgb(35, 103, 158);
-  outline: none;
-  border: none;
   border-radius: 0rem 0.3rem 0.3rem 0rem;
-  box-shadow: 0.3rem 0.3rem #0f4ba5;
   cursor: pointer;
 }
 h2 {
-  display: flex;
-  padding: 1rem;
-  justify-content: center;
+  padding-bottom: 1rem;
 }
 .title {
   font-size: 3rem;
@@ -53,7 +50,6 @@ h2 {
   padding-top: 2rem;
 }
 .definition {
-  display: flex;
-  justify-content: center;
-  padding: 0rem 4rem 0rem 4rem;
+  text-align: center;
+  padding: 1rem 4rem 0rem 4rem;
 }
