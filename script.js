@@ -2,7 +2,14 @@ const inputElement = document.getElementById("input");
 const buttonElement = document.getElementById("button");
 const definitionDiv = document.getElementById("definition");
 
-buttonElement.addEventListener("click", () => showDefinitions())
+buttonElement.addEventListener("click", () => showDefinitions());
+
+inputElement.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    buttonElement.click();
+  }
+});
 
 async function getAPI() {
   const response = await fetch(
@@ -14,6 +21,7 @@ async function getAPI() {
   const results = await response.json();
   return results[0].meanings[0].definitions[0].definition;
 }
+
 async function showDefinitions() {
   definitionDiv.innerHTML = "";
   const definitionText = document.createElement("h3");
