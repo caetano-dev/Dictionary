@@ -21,12 +21,10 @@ async function getAPI() {
   const results = await response.json();
   return results[0].meanings[0].definitions[0].definition;
 }
-
 async function showDefinitions() {
   definitionDiv.innerHTML = "";
   const definitionText = document.createElement("h3");
-
-  if (inputElement.value != "") {
+  if (inputElement.value) {
     const definitionResults = await getAPI();
     const text = document.createTextNode(definitionResults);
     const h2 = document.createElement("h2");
