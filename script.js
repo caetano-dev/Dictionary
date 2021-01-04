@@ -2,6 +2,25 @@ const inputElement = document.getElementById("input");
 const buttonElement = document.getElementById("button");
 const definitionDiv = document.getElementById("definition");
 
+let language;
+const pathname = document.location.pathname;
+switch (pathname) {
+  case "/index.html":
+    language = "en";
+    console.log("set to english");
+    break;
+  case "/portuguese.html":
+    language = "pt-BR";
+    console.log("set to pt");
+    break;
+  case "/french.html":
+    language = "fr";
+    console.log("set to fr");
+    break;
+  default:
+    language = "en";
+}
+
 buttonElement.addEventListener("click", () => showDefinitions());
 
 inputElement.addEventListener("keyup", function (event) {
@@ -13,7 +32,7 @@ inputElement.addEventListener("keyup", function (event) {
 
 async function getAPI() {
   const response = await fetch(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${inputElement.value}`,
+    `https://api.dictionaryapi.dev/api/v2/entries/${language}/${inputElement.value}`,
     {
       method: "GET",
     }
