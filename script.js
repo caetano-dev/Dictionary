@@ -10,11 +10,11 @@ switch (pathname) {
     language = "en";
     h2.textContent = "Definition:";
     break;
-  case "/portuguese.html":
+  case "/pages/portuguese.html":
     language = "pt-BR";
     h2.textContent = "Definição:";
     break;
-  case "/french.html":
+  case "/pages/portuguese.html":
     language = "fr";
     h2.textContent = "Définition:";
     break;
