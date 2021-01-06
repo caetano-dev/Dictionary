@@ -14,7 +14,7 @@ switch (pathname) {
     language = "pt-BR";
     h2.textContent = "Definição:";
     break;
-  case "/pages/portuguese.html":
+  case "/pages/french.html":
     language = "fr";
     h2.textContent = "Définition:";
     break;
