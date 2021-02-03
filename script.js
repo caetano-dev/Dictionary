@@ -18,6 +18,14 @@ switch (pathname) {
     language = "fr";
     h2.textContent = "Définition:";
     break;
+  case "/pages/spanish.html":
+    language = "es";
+    h2.textContent = "Definición:";
+    break;
+  case "/pages/german.html":
+    language = "de";
+    h2.textContent = "Definition:";
+    break;
   default:
     language = "en";
     h2.textContent = "Definition:";
@@ -63,6 +71,14 @@ async function showDefinitions() {
       const text = document.createTextNode(
         "J'ai besoin que vouz tapiez quelque chose :("
       );
+      definitionText.appendChild(text);
+      definitionDiv.appendChild(definitionText);
+    } else if (language == "es") {
+      const text = document.createTextNode("Necesito que escribas algo :(");
+      definitionText.appendChild(text);
+      definitionDiv.appendChild(definitionText);
+    } else if (language == "de") {
+      const text = document.createTextNode("Sie müssen etwas tippen :(");
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     }
