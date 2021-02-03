@@ -1,0 +1,16 @@
+html {
+  background-color: #faca04;
+}
+button {
+  background-color: #fd0002;
+  color: #faca04;
+}
+.title {
+  color: #fd0002;
+  text-shadow: 0.1rem 0.1rem #000000;
+}
+p,
+h3,
+h2 {
+  color: #fd0002;
+}
