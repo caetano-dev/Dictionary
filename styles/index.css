@@ -1,10 +1,6 @@
 html {
   background-color: #002868;
 }
-input,
-button {
-  box-shadow: 0.3rem 0.3rem #0f1f3b;
-}
 button {
   background-color: #b22234;
   color: white;
@@ -12,9 +8,6 @@ button {
 .title {
   text-shadow: 0.1rem 0.1rem #000000;
   color: #b22234;
-}
-a {
-  color: white;
 }
 p,
 h3,
