@@ -14,3 +14,7 @@ h3,
 h2 {
   color: #2c378f;
 }
+.image_container img {
+  margin-bottom: -1rem;
+  padding-right: 0rem;
+}
