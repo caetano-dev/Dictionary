@@ -11,13 +11,17 @@
 
   <body>
     <header>
-      <div class="languageContainer">
-        <a href="../index.html">English</a>
-        <a href="portuguese.html">Portuguese</a>
-        <a href="french.html">French</a>
-        <a href="spanish.html">Spanish</a>
-        <a href="german.html">German</a>
-      </div>
+      <nav class="hamnav">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <div class="languageContainer" id="languageContainer">
+          <a href="../index.html">English</a>
+          <a href="portuguese.html">Portuguese</a>
+          <a href="french.html">French</a>
+          <a href="spanish.html">Spanish</a>
+          <a href="german.html">German</a>
+        </div>
+      </nav>
     </header>
     <div class="app" id="app">
       <div class="text-container">
@@ -33,7 +37,7 @@
       <div class="definition" id="definition"></div>
     </div>
     <div class="image_container">
-      <img src="../assets/tower.svg">
+      <img src="../assets/tower.svg" />
     </div>
     <script src="../script.js"></script>
   </body>
