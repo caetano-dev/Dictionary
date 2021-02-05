@@ -112,6 +112,7 @@ p {
     padding: 10px;
   }
   .languageContainer a {
+    background-color: rgba(255, 255, 255, 0.151);
     box-sizing: border-box;
     display: block;
     width: 100%;
