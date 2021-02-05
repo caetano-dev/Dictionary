@@ -54,8 +54,6 @@ h2 {
 }
 .languageContainer {
   display: flex;
-  /* justify-content: space-between;
-  float: right; */
 }
 .languageContainer a {
   padding: 0.5rem 0.5rem;
