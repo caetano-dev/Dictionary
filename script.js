@@ -1,28 +1,30 @@
 const inputElement = document.getElementById("input");
 const buttonElement = document.getElementById("button");
 const definitionDiv = document.getElementById("definition");
+const paragraphElement = document.getElementById("paragraph")
 const h2 = document.createElement("h2");
 
-let language;
-const pathname = document.location.pathname;
-switch (pathname) {
-  case "/index.html":
+let language
+let paragraph = paragraphElement.textContent
+
+switch (paragraph) {
+  case "Type below and search for a word.":
     language = "en";
     h2.textContent = "Definition:";
     break;
-  case "/pages/portuguese.html":
+  case "Digite abaixo e procure por uma palavra.":
     language = "pt-BR";
     h2.textContent = "Definição:";
     break;
-  case "/pages/french.html":
+  case "Tapez ci-dessous et recherchez un mot.":
     language = "fr";
     h2.textContent = "Définition:";
     break;
-  case "/pages/spanish.html":
+  case "Escriba abajo y busque una palabra.":
     language = "es";
     h2.textContent = "Definición:";
     break;
-  case "/pages/german.html":
+  case "Tippen Sie unten und suchen Sie nach einem Wort.":
     language = "de";
     h2.textContent = "Definition:";
     break;
