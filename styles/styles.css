@@ -40,10 +40,22 @@ h2 {
     opacity: 100%;
   }
 }
+.hamnav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.hamnav label,
+#hamburger {
+  display: none;
+}
+#hamburger {
+  border: 1px solid black;
+}
 .languageContainer {
   display: flex;
-  justify-content: space-between;
-  float: right;
+  /* justify-content: space-between;
+  float: right; */
 }
 .languageContainer a {
   padding: 0.5rem 0.5rem;
@@ -82,12 +94,39 @@ p {
   height: 60vh;
   padding-right: 10rem;
 }
+
 @media screen and (max-width: 1100px) {
   .image_container img {
     height: 20rem;
   }
 }
+
 @media screen and (max-width: 700px) {
+  .image_container img {
+    display: none;
+  }
+  .hamnav label {
+    display: inline-block;
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  .languageContainer a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+  .languageContainer {
+    display: none;
+  }
+  .hamnav input:checked ~ #languageContainer {
+    display: block;
+  }
+}
+
+@media screen and (max-height: 650px) {
   .image_container img {
     display: none;
   }
