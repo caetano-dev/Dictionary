@@ -1,6 +1,6 @@
 # Dictionary
 
-A minimalist dictionary built with JavaScript that supports 3 languages.
+A minimalist dictionary built with JavaScript that supports 5 languages.
 
 ## English
 
