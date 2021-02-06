@@ -13,3 +13,11 @@ A minimalist dictionary built with JavaScript that supports 3 languages.
 ## Portuguese
 
 ![Portuguese](./.github/Portuguese.png)
+
+## Spanish
+
+![Spanish](./.github/Spanish.png)
+
+## German
+
+![German](./.github/German.png)
