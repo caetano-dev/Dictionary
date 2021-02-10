@@ -89,7 +89,7 @@ p {
 .image_container img {
   position: relative;
   float: right;
-  height: 60vh;
+  height: 55vh;
   padding-right: 10rem;
 }
 
@@ -125,7 +125,7 @@ p {
   }
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 890px) {
   .image_container img {
     display: none;
   }
