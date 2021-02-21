@@ -7,6 +7,10 @@ const h2 = document.createElement("h2");
 let language
 let paragraph = paragraphElement.textContent
 
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js")
+}
+
 switch (paragraph) {
   case "Type below and search for a word.":
     language = "en";
