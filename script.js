@@ -1,40 +1,41 @@
 const inputElement = document.getElementById("input");
 const buttonElement = document.getElementById("button");
 const definitionDiv = document.getElementById("definition");
-const paragraphElement = document.getElementById("paragraph")
-const h2 = document.createElement("h2");
+const paragraphElement = document.getElementById("paragraph");
+const definitionH2 = document.createElement("h2");
+const errorText = document.createElement("h2");
 
-let language
-let paragraph = paragraphElement.textContent
+let language;
+let paragraph = paragraphElement.textContent;
 
-if("serviceWorker" in navigator){
-  navigator.serviceWorker.register("sw.js")
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
 }
 
 switch (paragraph) {
   case "Type below and search for a word.":
     language = "en";
-    h2.textContent = "Definition:";
+    definitionH2.textContent = "Definition:";
     break;
   case "Digite abaixo e procure por uma palavra.":
     language = "pt-BR";
-    h2.textContent = "Definição:";
+    definitionH2.textContent = "Definição:";
     break;
   case "Tapez ci-dessous et recherchez un mot.":
     language = "fr";
-    h2.textContent = "Définition:";
+    definitionH2.textContent = "Définition:";
     break;
   case "Escriba abajo y busque una palabra.":
     language = "es";
-    h2.textContent = "Definición:";
+    definitionH2.textContent = "Definición:";
     break;
   case "Tippen Sie unten und suchen Sie nach einem Wort.":
     language = "de";
-    h2.textContent = "Definition:";
+    definitionH2.textContent = "Definition:";
     break;
   default:
     language = "en";
-    h2.textContent = "Definition:";
+    definitionH2.textContent = "Definition:";
 }
 buttonElement.addEventListener("click", () => showDefinitions());
 
@@ -53,17 +54,25 @@ async function getAPI() {
     }
   );
   const results = await response.json();
-  return results[0].meanings[0].definitions[0].definition;
+  if (results[0] == undefined) {
+    errorText.textContent = "Error";
+    definitionDiv.appendChild(errorText);
+  } else {
+    return results[0].meanings[0].definitions[0].definition;
+  }
 }
+
 async function showDefinitions() {
   definitionDiv.innerHTML = "";
   const definitionText = document.createElement("h3");
   if (inputElement.value) {
     const definitionResults = await getAPI();
-    const text = document.createTextNode(definitionResults);
-    definitionDiv.appendChild(h2);
-    definitionText.appendChild(text);
-    definitionDiv.appendChild(definitionText);
+    if (definitionResults != undefined) {
+      const text = document.createTextNode(definitionResults);
+      definitionDiv.appendChild(definitionH2);
+      definitionText.appendChild(text);
+      definitionDiv.appendChild(definitionText);
+    }
   } else {
     if (language == "en") {
       const text = document.createTextNode("I need you to type something :(");
