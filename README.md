@@ -1,6 +1,6 @@
 # Dictionary
 
-A minimalist dictionary built with JavaScript that supports 5 languages.
+A minimalist dictionary built with JavaScript that supports 5 languages*.
 
 ## English
 
@@ -21,3 +21,5 @@ A minimalist dictionary built with JavaScript that supports 5 languages.
 ## German
 
 ![German](./.github/German.png)
+
+*Portuguese support has been shut down by the API creator.
