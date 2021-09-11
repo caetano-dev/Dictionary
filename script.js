@@ -38,8 +38,8 @@ switch (paragraph) {
 }
 buttonElement.addEventListener("click", () => showDefinitions());
 
-inputElement.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
+inputElement.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") {
     event.preventDefault();
     buttonElement.click();
   }
