@@ -6,6 +6,7 @@ const definitionH2 = document.createElement("h2");
 const errorText = document.createElement("h2");
 
 let language;
+let text;
 let paragraph = paragraphElement.textContent;
 
 if ("serviceWorker" in navigator) {
@@ -14,22 +15,29 @@ if ("serviceWorker" in navigator) {
 
 switch (paragraph) {
   case "Type below and search for a word.":
+    text = document.createTextNode("I need you to type something :(");
     language = "en";
     definitionH2.textContent = "Definition:";
     break;
   case "Digite abaixo e procure por uma palavra.":
+    text = document.createTextNode("Preciso que você digite algo :(");
     language = "pt-BR";
     definitionH2.textContent = "Definição:";
     break;
   case "Tapez ci-dessous et recherchez un mot.":
+    text = document.createTextNode(
+      "J'ai besoin que vouz tapiez quelque chose :("
+    );
     language = "fr";
     definitionH2.textContent = "Définition:";
     break;
   case "Escriba abajo y busque una palabra.":
+    text = document.createTextNode("Necesito que escribas algo :(");
     language = "es";
     definitionH2.textContent = "Definición:";
     break;
   case "Tippen Sie unten und suchen Sie nach einem Wort.":
+    text = document.createTextNode("Sie müssen etwas tippen :(");
     language = "de";
     definitionH2.textContent = "Definition:";
     break;
@@ -75,25 +83,18 @@ async function showDefinitions() {
     }
   } else {
     if (language == "en") {
-      const text = document.createTextNode("I need you to type something :(");
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     } else if (language == "pt-BR") {
-      const text = document.createTextNode("Preciso que você digite algo :(");
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     } else if (language == "fr") {
-      const text = document.createTextNode(
-        "J'ai besoin que vouz tapiez quelque chose :("
-      );
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     } else if (language == "es") {
-      const text = document.createTextNode("Necesito que escribas algo :(");
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     } else if (language == "de") {
-      const text = document.createTextNode("Sie müssen etwas tippen :(");
       definitionText.appendChild(text);
       definitionDiv.appendChild(definitionText);
     }
